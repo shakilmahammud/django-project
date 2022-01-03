@@ -7,3 +7,9 @@ def index(req):
     return render(req,'index.html',{'text_1':'I am a text sent from view.py'})
 def contact(req):
     return HttpResponse("<h1>HI It's Contact Page</h1>")
+def contact(req):
+    return HttpResponse("<h1>HI It's Contact Page</h1>")
+def contact(req):
+    return HttpResponse("<h1>HI It's Contact Page</h1>")
+def contact(req):
+    return HttpResponse("<h1>HI It's Contact Page</h1>")
