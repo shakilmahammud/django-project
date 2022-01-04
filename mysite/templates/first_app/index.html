@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,5 +11,15 @@
   <h1>This is the home page of first app</h1>
   <h2>html file add done</h2> 
   {{text_1}} 
+  <ul>
+  {%for row in ami %}
+ 
+    <li>{{row.first_name}}</li>
+    <li>{{row.last_name}}</li>
+    <li>{{row.instrument}}</li>
+
+  {%endfor%}
+</ul>
+  <img src="{% static 'ok.png'%}" alt="">
 </body>
 </html>
