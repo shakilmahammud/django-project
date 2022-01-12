@@ -5,7 +5,6 @@ from first_app.models import Ami,Tumi
 def index(req):
     #Select * From Ami Order by First name
     ami_list = Ami.objects.order_by('first_name')
-
     return render(req,'index.html',{'text_1':'I am a text sent from view.py','ami':ami_list})
 def form(req):
     return render(req,'form.html',)
