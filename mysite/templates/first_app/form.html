@@ -7,11 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>This is a form</h3>
-    <form action="" method="post">
-        <label for="name">Name</label>
-        <input type="text" name="name" value="">
-        
+    <hr>
+    <h4>this create by django</h4>
+    <form action="" method="POST">
+        {{Form.as_p}}
+        {% csrf_token %} 
+        <input type="submit">
     </form>
+    {%if submit%}
+    <p>Name: {{user_mail}}</p>
+    <p>Name: {{user_email}}</p>
+    {%endif%}
 </body>
 </html>
