@@ -4,6 +4,8 @@ from first_app.models import Ablum,Ami,Tumi,Musician
 class Userform(forms.Form):
     user_mail  = forms.EmailField()
     user_email = forms.EmailField()
+    user_name = forms.CharField()
+    dob= forms.DateField()
     
     def clean(self):
         cleaned_data = super().clean()
