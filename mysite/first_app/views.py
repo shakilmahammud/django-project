@@ -16,6 +16,7 @@ def form(req):
         diction.update({'Form':nform})
         if nform.is_valid():
             diction.update({'user_name':'field match'})
+            diction.update({'email':'email match'})
             diction.update({'submit':'Yes'})
    
     return render(req,'form.html',context=diction)

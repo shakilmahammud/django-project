@@ -6,6 +6,10 @@ class Userform(forms.Form):
     user_email = forms.EmailField()
     user_name = forms.CharField()
     dob= forms.DateField()
+    user_mail  = forms.EmailField()
+    user_email = forms.EmailField()
+    user_name = forms.CharField()
+    dob= forms.DateField()
     
     def clean(self):
         cleaned_data = super().clean()
