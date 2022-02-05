@@ -9,15 +9,25 @@ def index(req):
     ami_list = Ami.objects.order_by('first_name')
     return render(req,'index.html',{'text_1':'I am a text sent from view.py','ami':ami_list})
 def form(req):
-    nform =Userform()
+    nform = Userform()
     diction ={'Form':nform}
+    
     if req.method == 'POST':
         nform = Userform(req.POST)
         diction.update({'Form':nform})
         if nform.is_valid():
-            diction.update({'user_name':'field match'})
-            diction.update({'email':'email match'})
-            diction.update({'submit':'Yes'})
+            nform.save(commit=True)
+            return index(req)
+    
    
     return render(req,'form.html',context=diction)
     
+# nform =Userform()
+    # diction ={'Form':nform}
+    # if req.method == 'POST':
+    #     nform = Userform(req.POST)
+    #     diction.update({'Form':nform})
+    #     if nform.is_valid():
+    #         diction.update({'user_name':'field match'})
+    #         diction.update({'email':'email match'})
+    #         diction.update({'submit':'Yes'})

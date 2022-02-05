@@ -18,15 +18,6 @@
     <p>Name: {{user_mail}}</p>
     <p>Name: {{user_email}}</p>
     {%endif%}
-    <h4>this create by django</h4>
-    <form action="" method="POST">
-        {{Form.as_p}}
-        {% csrf_token %} 
-        <input type="submit">
-    </form>
-    {%if submit%}
-    <p>Name: {{user_name}}</p>
-    <p>Name: {{email}}</p>
-    {%endif%}
+   
 </body>
 </html>

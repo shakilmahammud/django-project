@@ -8,32 +8,20 @@
     <title>Home Page of First App</title>
 </head>
 <body>
+  <a href="/form/">Add New</a>
   <h1>This is the home page of first app</h1>
   <h2>html file add done</h2> 
   {{text_1}} 
   <ul>
   {%for row in ami %}
- 
     <li>{{row.first_name}}</li>
     <li>{{row.last_name}}</li>
     <li>{{row.instrument}}</li>
 
   {%endfor%}
-  {%for row in ami %}
  
-  <li>{{row.first_name}}</li>
-  <li>{{row.last_name}}</li>
-  <li>{{row.instrument}}</li>
 
-{%endfor%}
-{%for row in ami %}
- 
-  <li>{{row.first_name}}</li>
-  <li>{{row.last_name}}</li>
-  <li>{{row.instrument}}</li>
-
-{%endfor%}
 </ul>
-  <img src="{% static 'ok.png'%}" alt="">
+  <!-- <img src="{% static 'ok.png'%}" alt=""> -->
 </body>
 </html>
